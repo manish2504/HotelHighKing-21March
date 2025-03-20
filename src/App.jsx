@@ -104,7 +104,7 @@ const App = () => {
             <Route path="/wedding-event" element={<WeddingEventPage />} />
             <Route path="/occasion-event" element={<OccasionEventPage />} />
             <Route path="/corporate-event" element={<CorporateEventPage />} />
-            <Route path="/home/Jaipurroute" element={<JaipurPage />} />
+            <Route path="/home/jaipurroute" element={<JaipurPage />} />
             <Route path="/home/shahpuraroute" element={<ShahpuraPage />} />
             <Route path="/home/bagruroute" element={<BagruPage />} />
             <Route path="/home/behrorroute" element={<BehrorPage />} />
@@ -124,6 +124,13 @@ const App = () => {
                 element={<PropertyPage hotel={hotel} />}
               />
             ))}
+            {/* {hotels.map((hotel) => (
+              <Route
+                key={hotel._id}
+                path={`/home/${hotel.title}route`} // Create URL-friendly paths
+                element={<PropertyPage hotel={hotel} />}
+              />
+            ))} */}
           </Routes>
         </main>
         <Footer />

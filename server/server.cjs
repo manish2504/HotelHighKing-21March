@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const hotelRoutes = require('./routes/HotelData.cjs');  // Import hotel routes
-
+const createUser = require('./routes/CreateUser.cjs');
 const app = express();
 
 // Middleware
@@ -166,6 +166,7 @@ app.put('/api/blogs/:id', async (req, res) => {
 });
 
 app.use('/api/hotels', hotelRoutes);
+app.use('/admin',createUser);
 
 // Start server
 const PORT = process.env.PORT || 5000;

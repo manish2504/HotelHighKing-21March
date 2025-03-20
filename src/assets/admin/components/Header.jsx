@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bell, User } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const [admin, setAdmin] = useState("")
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userEmail");
+    navigate("/admin/login");
+  };
+  useEffect(()=>{
+    setAdmin(localStorage.getItem("userEmail"))
+  },[localStorage.getItem("userEmail")])
   return (
     <header className="bg-white shadow-lg h-16 flex items-center justify-between px-6">
       <div className="flex items-center space-x-4">
@@ -18,8 +29,11 @@ const Header = () => {
           <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
             <User size={24} className="text-gray-700" />
           </div>
-          <span className="text-lg font-medium text-gray-800">Naveen</span>
+          <span className="text-lg font-medium text-gray-800">{admin}</span>
         </div>
+        <div className="btn bg-white text-danger mx-2" onClick={handleLogout}>
+          Logout
+          </div>
       </div>
     </header>
   );

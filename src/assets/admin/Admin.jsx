@@ -16,16 +16,20 @@ import EditBlog from './pages/EditBlog';  // Edit Blog component
 import BlogForm from './pages/BlogForm';  // Add Blog component
 import Settings from "./pages/Settings";
 import Hotels from "./pages/Hotels";
+import Login from "./pages/Login";
 
 function AdminPanel() {
   return (
     <div className="flex min-h-screen bg-gray-100">
-      <Sidebar />
+      {(localStorage.getItem("authToken"))?
+      <Sidebar />:null}
       <div className="flex-1">
-        <Header />
+      {(localStorage.getItem("authToken"))?
+        <Header />:null}
         <main className="p-6">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/rooms" element={<Rooms />} />
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/offers" element={<Offers />} />
