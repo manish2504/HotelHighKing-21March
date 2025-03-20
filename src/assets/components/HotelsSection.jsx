@@ -10,21 +10,25 @@ import neelkaImage from "../images/neelka.jpg";
 import neemranaImage from "../images/neemrana.jpg";
 import bilaspurImage from "../images/bilaspur.jpg";
 import axios from "axios";
-// const hotels = [
+// const imgs = [
 //   { name: "JAIPUR", image: jaipurImage, path: "/home/jaipurroute" },
 //   { name: "SHAHPURA", image: shahpuraImage, path: "/home/shahpuraroute" },
 //   { name: "BAGRU", image: bagruImage, path: "/home/bagruroute" },
 //   { name: "BEHROR", image: behrorImage, path: "/home/behrorroute" },
 //   { name: "NEELKA", image: neelkaImage, path: "home/neelkaroute" },
 //   { name: "NEEMRANA", image: neemranaImage, path: "home/neemranaroute" },
-  
+//   { name: "BILASPUR", image: bilaspurImage, path: "home/bilaspurroute"},
 // ];
+const Imgs ={
+  'jaipur':jaipurImage,
+  'shahpura':shahpuraImage,
+  'bagru':bagruImage,
+  'behror':behrorImage,
+  'neelka':neelkaImage,
+  'neemrana':neemranaImage,
+  'bilaspur':bilaspurImage,
+}
 
-// const extraHotel = {
-//   name: "BILASPUR",
-//   image: bilaspurImage,
-//   path: "home/bilaspurroute",
-// };
 
 const HotelsSection = () => {
   const [showMore, setShowMore] = useState(false);
@@ -56,7 +60,7 @@ const HotelsSection = () => {
           <Link to={`/home/${hotel.title}route`} key={index}>
             <div className="relative overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 cursor-pointer">
               <img
-                src={jaipurImage}
+                src={Imgs[hotel.title.toLowerCase()]}
                 alt={hotel.title}
                 className="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-2"
               />
