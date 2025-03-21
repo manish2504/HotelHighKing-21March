@@ -52,7 +52,7 @@ const HotelsSection = () => {
     <section className="py-12 bg-white">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900">Our Hotels</h2>
-        <div className="w-16 h-1 bg-yellow-500 mx-auto mt-2"></div>
+        
       </div>
 
       <div className="container mx-auto grid md:grid-cols-3 gap-6 px-6">

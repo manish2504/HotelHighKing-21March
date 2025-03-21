@@ -7,7 +7,8 @@ import logo from "../images/logo1.png";
 const NavLink = ({ to, children, closeMenu }) => (
   <Link
     to={to}
-    className="group text-gray-200 hover:text-yellow-400 transition-all duration-300 py-2 relative"
+    className="group text-black hover:text-yellow-400 transition-all duration-300 py-2 relative"
+
     onClick={closeMenu} // Close the menu when clicked
   >
     {children}
@@ -78,9 +79,8 @@ const Navbar = ({ offers }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        isScrolled ? "bg-[#1a2332] shadow-lg" : "bg-transparent"
-      }`}
+    className={`w-full transition-all duration-300 ease-in-out ${isScrolled ? "bg-white shadow-lg" : "bg-white"}`}
+
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -136,7 +136,10 @@ const Navbar = ({ offers }) => {
             {/* Offers Link (Modal Trigger) */}
             <button
               onClick={handleMobileOfferClick} // Trigger the modal with offers
-              className="group text-gray-200 hover:text-yellow-400 transition-all duration-300 py-2 relative"
+              className="group text-black hover:text-yellow-400 transition-all duration-300 py-2 relative"
+
+
+
             >
               Offers
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-yellow-400 to-red-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>

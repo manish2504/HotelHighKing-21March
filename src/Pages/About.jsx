@@ -212,14 +212,7 @@ const About = () => {
               Our Journey
             </h2>
             
-            <div className="bg-white text-gray-800 p-6 rounded-xl shadow-lg mb-8">
-              <div className="flex justify-center text-4xl md:text-5xl text-indigo-500 mb-6">
-                <FaHistory />
-              </div>
-              <p className="text-lg mb-6">
-                The Hotel Highway King story is one of vision, perseverance, and a deep understanding of travelers' needs. Here's how our journey unfolded over the past 25 years.
-              </p>
-            </div>
+            
             
             {/* Timeline */}
             <div className="relative">
@@ -381,29 +374,7 @@ const About = () => {
 
         {/* Add a sidebar navigation for easy scrolling */}
         <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
-          <div className="bg-gray-900 bg-opacity-80 p-2 rounded-lg shadow-lg">
-            <ul className="space-y-2">
-              {[
-                { id: "about-us", icon: <FaCrown />, name: "About" },
-                { id: "leadership", icon: <FaHeadset />, name: "Leadership" },
-                { id: "vision", icon: <FaEye />, name: "Vision" },
-                { id: "journey", icon: <FaHistory />, name: "Journey" },
-                { id: "success", icon: <FaAward />, name: "Success" },
-                { id: "milestones", icon: <FaStar />, name: "Milestones" }
-              ].map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={`#${item.id}`}
-                    className="flex flex-col items-center w-12 h-12 rounded-lg hover:bg-gray-700 text-gray-400 hover:text-yellow-500 transition-all p-1"
-                    title={item.name}
-                  >
-                    <span className="text-lg mb-1">{item.icon}</span>
-                    <span className="text-xs">{item.name}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+         
         </div>
       </div>
     </div>

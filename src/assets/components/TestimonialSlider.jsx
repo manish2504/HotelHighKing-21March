@@ -58,7 +58,7 @@
       <div className="bg-gradient-to-b from-gray-50 to-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-600">
+            <h2 className="text-3xl font-bold text-gray-900">
               Hear From Our Guests
             </h2>
             <p className="text-lg text-gray-600 mb-12">

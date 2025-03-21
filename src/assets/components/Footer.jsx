@@ -2,9 +2,11 @@ import { FaFacebookF, FaInstagram, FaPinterestP, FaTwitter, FaYoutube } from "re
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-white text-black">
+
       {/* Upper Section - Gradient Background */}
-      <div className="bg-gradient-to-r from-gray-800 to-black py-10">
+      <div className="bg-white py-10">
+
         <div className="container mx-auto grid md:grid-cols-3 gap-8 px-6">
           {/* Contact Us */}
           <div>
@@ -76,7 +78,8 @@ const Footer = () => {
       </div>
 
       {/* Lower Section - Black Background */}
-      <div className="bg-black text-white text-center py-4">
+      <div className="bg-white text-black text-center py-4">
+
         <p>© 2025 Kantag Solution All rights reserved.</p>
         <p className="mt-1">
           <a href="#" className="hover:text-yellow-500 transition-colors duration-300">Terms & Conditions</a> |
