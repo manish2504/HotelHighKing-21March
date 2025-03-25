@@ -73,7 +73,7 @@ const Navbar = ({ offers }) => {
     { name: "Bilaspur", path: "home/bilaspurroute" },
     { name: "Neemrana", path: "home/neemranaroute" },
     { name: "Neelka", path: "home/neelkaroute" },
-    { name: "Bagru", path: "/home/bagruroute" },
+    { name: "Bagru", path: "home/bagruroute" },
   ];
 
   return (
@@ -123,7 +123,7 @@ const Navbar = ({ offers }) => {
                   {locationRoutes.map((location) => (
                     <Link
                       key={location.path}
-                      to={location.path}
+                      to={`/${location.path}`}
                       className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
                     >
                       {location.name}

@@ -48,7 +48,7 @@ export const Hero = () => {
           </p>
         </div>
 
-        <BookingWidget />
+        {/* <BookingWidget /> */}
       </div>
     </div>
   );

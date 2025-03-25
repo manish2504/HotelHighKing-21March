@@ -46,4 +46,39 @@ router.post('/', async (req, res) => {
     }
   });
 
+  router.put("/:id", async (req, res) => {
+    try {
+      const { id } = req.params; // Get hotel ID from URL
+      const updatedHotel = await Hotel.findByIdAndUpdate(id, req.body, {
+        new: true, // Return the updated document
+        runValidators: true, // Ensure validation rules are applied
+      });
+  
+      if (!updatedHotel) {
+        return res.status(404).json({ message: "Hotel not found" });
+      }
+  
+      res.json(updatedHotel);
+    } catch (error) {
+      console.error("Error updating hotel:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  });
+
+  router.delete("/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const deletedHotel = await Hotel.findByIdAndDelete(id);
+  
+      if (!deletedHotel) {
+        return res.status(404).json({ message: "Hotel not found" });
+      }
+  
+      res.json({ message: "Hotel deleted successfully", deletedHotel });
+    } catch (error) {
+      console.error("Error deleting hotel:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  });
+
 module.exports = router;

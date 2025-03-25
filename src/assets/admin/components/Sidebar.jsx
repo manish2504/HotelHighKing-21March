@@ -20,7 +20,7 @@ const Sidebar = () => {
     { icon: MessageSquare, label: "Queries", path: "/admin/queries" },
     { icon: Settings, label: "Settings", path: "/admin/settings" },
   ];
-  if(localStorage.getItem("authToken")) {
+  if(!localStorage.getItem("authToken")) {
     return(<></>);
   }
 
